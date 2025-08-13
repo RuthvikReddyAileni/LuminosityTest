@@ -1,0 +1,60 @@
+import type { Product } from '@/types';
+
+export const seedProducts: Omit<Product, 'id'>[] = [
+  {
+    name: 'Roman Gladiator Selfie Stick',
+    description: 'Capture the glory of the Colosseum with this extendable bronze selfie stick. Guaranteed to survive lion attacks.',
+    price: 29.99,
+    stock: 12,
+    category: 'Ancient Rome',
+    imageUrl: '/Roman Gladiator Selfie Stick.png',
+  },
+  {
+    name: 'Dinosaur Repellent Spray',
+    description: 'Keep T-Rex at bay with our patented prehistoric pepper spray. Not responsible for curious Velociraptors.',
+    price: 14.5,
+    stock: 5,
+    category: 'Prehistoric',
+    imageUrl: '/Dinosaur Repellent Spray.png',
+  },
+  {
+    name: 'Victorian Era VR Goggles',
+    description: 'Immerse yourself in the bustling streets of London—complete with smog and street vendors shouting about pies.',
+    price: 99.0,
+    stock: 8,
+    category: 'Victorian Era',
+    imageUrl: '/Victorian Era VR Goggles.png',
+  },
+  {
+    name: 'Medieval Chainmail Pajamas',
+    description: 'Sleep soundly knowing no midnight sword fight can harm you. A bit heavy, but oh so secure.',
+    price: 150.0,
+    stock: 3,
+    category: 'Middle Ages',
+    imageUrl: '/Medieval Chainmail Pajamas.png',
+  },
+  {
+    name: '1960s Moon Landing Popcorn',
+    description: 'Freshly popped during the Apollo 11 broadcast. Still crunchy, with a hint of space dust.',
+    price: 12.99,
+    stock: 20,
+    category: '20th Century',
+    imageUrl: '/1960s Moon Landing Popcorn.png',
+  },
+  {
+    name: 'Jurassic Fossil Ice Cubes',
+    description: 'Authentic glacier-frozen cubes containing tiny prehistoric surprises. Adds history to any drink.',
+    price: 22.0,
+    stock: 6,
+    category: 'Prehistoric',
+    imageUrl: '/Jurassic Fossil Ice Cubes.png',
+  },
+  {
+    name: 'Steampunk Picket Drone',
+    description: 'A brass-and-gear mini-drone perfect for delivering secret messages in style.',
+    price: 85.75,
+    stock: 10,
+    category: 'Victorian Era',
+    imageUrl: '/Steampunk Picket Drone.png',
+  },
+];
