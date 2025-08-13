@@ -4,11 +4,13 @@
 
 <template>
   <CatalogPage />
+  <ToastHost />
 </template>
 
 <script lang="ts">
 import CatalogPage from '@/pages/CatalogPage.vue';
-export default { components: { CatalogPage } };
+import ToastHost from '@/components/ToastHost.vue';
+export default { components: { CatalogPage, ToastHost } };
 </script>
 
 <style>

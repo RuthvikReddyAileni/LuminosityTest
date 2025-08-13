@@ -62,9 +62,9 @@ function onSubmit() { submitted.value = store.submitOrder(); }
 
     <div v-if="submitted" style="margin-top:1rem;">
       <h3 style="margin:0 0 .5rem;">Submitted Order (MVP Output)</h3>
-      <pre style="white-space: pre-wrap; background:#0d1017; border:1px solid #222838; padding:.75rem; border-radius: 10px;">
+    <pre class="code-block">
 {{ JSON.stringify(submitted, null, 2) }}
-      </pre>
+    </pre>
     </div>
   </section>
 </template>

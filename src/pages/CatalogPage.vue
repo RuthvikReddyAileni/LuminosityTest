@@ -10,17 +10,18 @@ onMounted(() => store.init());
 </script>
 
 <template>
-  <main class="container">
-    <header class="header">
-      <div class="header__brand">
-        <img src="/Time Traveler Gift Shop Logo.png" alt="Time Traveler's Gift Shop logo" width="44" height="44" />
-        <div class="header__title">Time Traveler's Gift Shop</div>
-      </div>
-      <CategoryFilter />
-    </header>
+  <!-- HEADER NOW OUTSIDE, FULL BLEED -->
+  <header class="header topbar">
+    <div class="header__brand">
+      <img src="/Time Traveler Gift Shop Logo.png" alt="Time Traveler's Gift Shop logo" width="44" height="44" />
+      <div class="header__title">Time Traveler's Gift Shop</div>
+    </div>
+    <CategoryFilter />
+  </header>
 
-    <!-- Add a class when cart is visible -->
-    <div class="layout" :class="{ 'cart-open': store.showCart }" aria-live="polite" aria-busy="false">
+  <!-- Page content stays in the padded container -->
+  <main class="container">
+    <div :class="['layout', { 'cart-open': store.showCart }]">
       <section class="catalog">
         <h2 class="sr-only">Product Catalog</h2>
         <div v-if="store.loading" class="panel">Loading products…</div>
@@ -29,9 +30,9 @@ onMounted(() => store.init());
           <ProductCard v-for="p in store.filteredProducts" :key="p.id" :product="p" />
         </div>
       </section>
-
-      <!-- Only render when toggled on -->
-      <OrderSummary v-if="store.showCart" />
+      <aside class="order-panel" v-if="store.showCart">
+        <OrderSummary />
+      </aside>
     </div>
   </main>
 </template>
